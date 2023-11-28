@@ -3,7 +3,7 @@ function App() {
   return (
     <>
       <div className="layout">
-        <Header/>
+        <Header />
         <content>content</content>
         <footer>footer</footer>
       </div>
