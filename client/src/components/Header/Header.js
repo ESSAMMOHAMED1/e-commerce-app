@@ -1,10 +1,10 @@
 import React from "react";
-import "../../../css/Header/Header/Header.css"
+ import "../../css/Header/Header.css"
 const Header = () => {
   return(
     <>
   <header>
-    shopping cart
+  shopping cart
   </header>
   </>
   ) ;

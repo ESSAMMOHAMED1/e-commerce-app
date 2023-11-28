@@ -1,35 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#root{
-  height: 100vh;
-}
-.layout {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "content"
-    "footer";
-  grid-template-rows: 50px 1fr 50px;
-  height: 100%;
-}
-
-content {
-  grid-area: content;
-  background-color: #366cbd;
-  font-size: 18px;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
-footer {
-  background-color: #1d4a8f;
-  grid-area: footer;
-  font-size: 18px;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}       
