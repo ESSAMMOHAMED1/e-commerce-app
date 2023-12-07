@@ -3,6 +3,7 @@ footer {
   grid-area: footer;
   font-size: 18px;
   color: #fff;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

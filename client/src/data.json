@@ -1,46 +1,34 @@
 [
-    {
-        "id": "id1",
-        "titel": "prodect 1",
-        "imgeUrl": "/public/assets/imges/prodect1.jpg",
-        "description": "this is prodect 1",
-        "price": 30,
-        "sizes": [
-            "S",
-            "M"
-        ]
-    },
-    {
-        "id": "id2",
-        "titel": "prodect 2",
-        "imgeUrl": "/public/assets/imges/prodect2.jpg",
-        "description": "this is prodect 2",
-        "price": 50,
-        "sizes": [
-            "L",
-            "XL"
-        ]
-    },
-    {
-        "id": "id3",
-        "titel": "prodect3",
-        "imgeUrl": "/public/assets/imges/prodect3.jpg",
-        "description": "this is prodect 3",
-        "price": 70,
-        "sizes": [
-            "XXL",
-            "L"
-        ]
-    },
-    {
-        "id": "id4",
-        "titel": "prodect4",
-        "imgeUrl": "/public/assets/imges/prodect4.jpg",
-        "description": "this is prodect 4",
-        "price": 100,
-        "sizes": [
-            "XXXL",
-            "S"
-        ]
-    }
+  {
+    "id": "id1",
+    "title": "product 1",
+    "imgeUrl": "/assets/imges/product1.png",
+    "description": "this is product 1",
+    "price": 30,
+    "sizes": ["S", "M"]
+  },
+  {
+    "id": "id2",
+    "title": "product 2",
+    "imgeUrl": "/assets/imges/product2.png",
+    "description": "this is product 2",
+    "price": 50,
+    "sizes": ["L", "XL"]
+  },
+  {
+    "id": "id3",
+    "title": "product3",
+    "imgeUrl": "/assets/imges/product1.png",
+    "description": "this is product 3",
+    "price": 70,
+    "sizes": ["XXL", "L"]
+  },
+  {
+    "id": "id4",
+    "title": "product4",
+    "imgeUrl": "/assets/imges/product4.png",
+    "description": "this is product 4",
+    "price": 100,
+    "sizes": ["XXXL", "S"]
+  }
 ]

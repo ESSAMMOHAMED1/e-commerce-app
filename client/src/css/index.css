@@ -1,6 +1,29 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   font-family: Arial, sans-serif;
-}       
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+#root{
+    height: 100vh;
+}
+.layout {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  height: 100%;
+  grid-template-rows: 50px 1fr 50px;  
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.wrapper .product-wrapper{
+    width: 65%; 
+}
+.wrapper .filter-wrapper{
+    width: 30%;
+}

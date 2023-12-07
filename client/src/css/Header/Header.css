@@ -3,6 +3,7 @@ header {
   background-color: #2e5ea5;
   font-size: 18px;
   color: #fff;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
