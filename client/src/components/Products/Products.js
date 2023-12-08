@@ -1,7 +1,7 @@
 import React from "react";
 import "../../css/Products/Products.css";
-import Modal from "react-modal";
 import { useState } from "react";
+import ProductModal from "./ProductModal";
 const Products = (props) => {
   const [product, setproduct] = useState("");
   const openModal = (product) => {
@@ -27,14 +27,7 @@ const Products = (props) => {
           </div>
         ))}
       </div>
-      <Modal className="Modal" isOpen={product} onRequestClose={closeMoldal}>
-        <span className="close-icon" onClick={closeMoldal}> &times; </span>
-        <div className="product-info">
-         <img src={product.imgeUrl} alt={product.title}></img>
-         <p>{product.title}</p>
-         <p>{product.description}</p>
-        </div>
-      </Modal>
+      <ProductModal product={product} closeMoldal={closeMoldal}/>
     </>
   );
 };
