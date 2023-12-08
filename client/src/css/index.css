@@ -2,8 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Verdana, sans-serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
 #root{
     height: 100vh;
 }
@@ -15,6 +16,7 @@
 }
 
 .wrapper{
+    padding: 30px;  
     display: flex;
     justify-content: space-between;
 }
@@ -22,7 +24,10 @@
 
 
 .wrapper .product-wrapper{
+    display: flex;
     width: 65%; 
+    justify-content:space-between;
+
 }
 .wrapper .filter-wrapper{
     width: 30%;

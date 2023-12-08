@@ -6,7 +6,7 @@ import { words } from "./words";
 import data from "./data.json"
 import Products from "./components/Products/Products";
 function App() {  
-  const [products,setproducts] = useState(data);
+  const [products,setproducts] = useState(data);  
   return (
     <>
       <div className="layout">
