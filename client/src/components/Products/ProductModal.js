@@ -11,6 +11,7 @@ const ProductModal = (props) => {
         <img src={product.imgeUrl} alt={product.title}></img>
         <p>{product.title}</p>
         <p>{product.description}</p>
+        <p>${product.price}</p>
       </div>
     </Modal>
   );

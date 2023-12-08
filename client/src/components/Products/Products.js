@@ -21,7 +21,7 @@ const Products = (props) => {
             </a>
             <div className="product-desc">
               <p> {product.title}</p>
-              <span> {product.price}</span>
+              <span>${product.price}</span>
             </div>
             <button> Add to cart </button>
           </div>
