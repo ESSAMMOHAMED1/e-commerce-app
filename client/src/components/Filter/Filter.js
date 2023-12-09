@@ -5,9 +5,9 @@ const Filter = () => {
     <>
       <div className="filter-wrapper">
         <h2 className="filter-title">Filter</h2>
-        <div className="number-product"> number of product </div>
+        <div className="number-product"> number of product 4 </div>
         <div className="filter-size">
-          <span> Filter </span>
+        <span> Filter </span>
           <select className="filter-select">
             <option value="ALL">all</option>
             <option value="S">XL</option>

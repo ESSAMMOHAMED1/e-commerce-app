@@ -25,7 +25,7 @@
 
 .wrapper .product-wrapper{
     display: flex;
-    width: 70%; 
+    width: 65%; 
     justify-content:space-between;
 
 }

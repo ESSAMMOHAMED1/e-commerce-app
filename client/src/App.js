@@ -16,7 +16,6 @@ function App() {
           <div className="wrapper">
             <Products products={products}/>
             <Filter />
-            <div className="filter-wrapper"> Filter </div>
           </div>
         </main>
         <Footer />
