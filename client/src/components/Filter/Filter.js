@@ -1,6 +1,6 @@
 import React from "react";
 import "../../css/Filter/Filter.css";
-const Filter = () => {
+const Filter = (props) => {
   return (
     <>
       <div className="filter-wrapper">
@@ -8,9 +8,9 @@ const Filter = () => {
         <div className="number-product"> number of product 4 </div>
         <div className="filter-size">
         <span> Filter </span>
-          <select className="filter-select">
-            <option value="ALL">all</option>
-            <option value="S">XL</option>
+          <select className="filter-select" value={props.size} onChange={props.handelFilterBySize}>
+            <option value="ALL">ALL</option>
+            <option value="S">S</option>
             <option value="M" >M</option>
             <option value="L">L</option>
             <option value="XXL">XXL</option>
@@ -20,10 +20,10 @@ const Filter = () => {
         </div>
         <div className="filter-size">
           <span> Order </span>
-          <select className="filter-select">
+          <select className="filter-select" value = {props.sort} onChange={props.handelFilterBySort}>
             <option value="latest">latest</option>
             <option value="highest">highest</option>
-            <option value="lower" >lower</option>
+            <option value="lowest" >lowest</option>
           </select>
         </div>
       </div>

@@ -18,7 +18,7 @@
   {
     "id": "id3",
     "title": "product3",
-    "imgeUrl": "/assets/imges/product1.png",
+    "imgeUrl": "/assets/imges/product3.png",
     "description": "this is product 3",
     "price": 70,
     "sizes": ["XXL", "L"]
