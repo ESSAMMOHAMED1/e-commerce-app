@@ -15,7 +15,7 @@ function App() {
     const selectedSize = e.target.value;
     if (selectedSize === "ALL") {
       setproducts(data);
-    }else{
+    } else {
       const filteredProducts = data.filter((product) =>
         product.sizes.includes(selectedSize)
       );
@@ -23,21 +23,32 @@ function App() {
     }
     setsize(selectedSize);
   };
-
   const handelFilterBySort = (e) => {
+    
+
     let order = e.target.value;
+    
+    setsort(order);
     let productClone = [...products];
+
     let newproduct = productClone.sort(function (a, b) {
       if (order === "lowest") {
         return a.price - b.price;
       } else if (order === "highest") {
         return b.price - a.price;
-      }else {
-        return a.id < b.id ? 1 : -1;
+      } else if (order === "latest") {
+        // Parse IDs as numbers for "latest" sorting
+        return parseInt(b.id, 10) - parseInt(a.id, 10);
+      } else {
+        return 0; // Default case, no sorting
       }
     });
+
+  
+
     setproducts(newproduct);
   };
+
   return (
     <>
       <div className="layout">
