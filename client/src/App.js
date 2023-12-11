@@ -6,11 +6,12 @@ import { words } from "./words";
 import data from "./data.json";
 import Products from "./components/Products/Products";
 import Filter from "./components/Filter/Filter";
+import Cart from "./components/Cart/Cart";
 function App() {
   const [products, setproducts] = useState(data);
+  const [cartItems, setcartItems] = useState(data);
   const [sort, setsort] = useState("");
   const [size, setsize] = useState("");
-
   const handelFilterBySize = (e) => {
     const selectedSize = e.target.value;
     if (selectedSize === "ALL") {
@@ -22,7 +23,7 @@ function App() {
       setproducts(filteredProducts);
     }
     setsize(selectedSize);
-  };
+};
   const handelFilterBySort = (e) => {
     
 
@@ -48,9 +49,13 @@ function App() {
 
     setproducts(newproduct);
   };
+  const addToCart = ()=> {
+  let cartItemClone = [...cartItems];
+
+  }
+
 
   return (
-    <>
       <div className="layout">
         <Header />
         <main>
@@ -59,14 +64,15 @@ function App() {
             <Filter
               size={size}
               sort={sort}
+              productsNumber = {products.length}
               handelFilterBySize={handelFilterBySize}
               handelFilterBySort={handelFilterBySort}
             />
           </div>
+         <Cart cartItems={cartItems}/>
         </main>
         <Footer />
       </div>
-    </>
   );
 }
 
