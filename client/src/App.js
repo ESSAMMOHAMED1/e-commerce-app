@@ -13,10 +13,9 @@ function App() {
 
   const handelFilterBySize = (e) => {
     const selectedSize = e.target.value;
-
     if (selectedSize === "ALL") {
       setproducts(data);
-    } else {
+    }else{
       const filteredProducts = data.filter((product) =>
         product.sizes.includes(selectedSize)
       );
@@ -26,7 +25,18 @@ function App() {
   };
 
   const handelFilterBySort = (e) => {
-    setsort(e.target.value);
+    let order = e.target.value;
+    let productClone = [...products];
+    let newproduct = productClone.sort(function (a, b) {
+      if (order === "lowest") {
+        return a.price - b.price;
+      } else if (order === "highest") {
+        return b.price - a.price;
+      }else {
+        return a.id < b.id ? 1 : -1;
+      }
+    });
+    setproducts(newproduct);
   };
   return (
     <>
