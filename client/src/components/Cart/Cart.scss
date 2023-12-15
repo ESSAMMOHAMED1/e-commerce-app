@@ -31,10 +31,12 @@
     }
      
     button{
-        color: #2a5ea5;
-        width: 20px;
-        height: 10px;
-        border-radius: 5px;
-
+        display: block;
+        width: 15%;
+        border: 0;
+        background: #2a5ea5;
+        color: #fff;
+        padding: 7px;
+        border-radius: 3px;
     }
 }

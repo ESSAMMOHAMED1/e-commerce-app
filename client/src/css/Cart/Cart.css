@@ -4,7 +4,7 @@
 }
 
 .cart-title {
-  border-bottom: 1px solid #1c0c0c;
+  border-bottom: 1px solid #c0c0c0;
   padding-bottom: 5px;
 }
 
@@ -25,4 +25,13 @@
   justify-content: space-between;
   align-items: center;
   flex: 1;
+}
+.cart-item button {
+  display: block;
+  width: 15%;
+  border: 0;
+  background: #2a5ea5;
+  color: #fff;
+  padding: 7px;
+  border-radius: 3px;
 }
