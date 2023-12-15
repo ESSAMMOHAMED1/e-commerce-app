@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import { words } from "./words";
@@ -9,7 +9,7 @@ import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
 function App() {
   const [products, setproducts] = useState(data);
-  const [cartItems, setcartItems] = useState(data);
+  const [cartItems, setcartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
   const [sort, setsort] = useState("");
   const [size, setsize] = useState("");
   const handelFilterBySize = (e) => {
@@ -25,8 +25,6 @@ function App() {
     setsize(selectedSize);
 };
   const handelFilterBySort = (e) => {
-    
-
     let order = e.target.value;
     
     setsort(order);
@@ -49,10 +47,29 @@ function App() {
 
     setproducts(newproduct);
   };
-  const addToCart = ()=> {
-  let cartItemClone = [...cartItems];
-
+  const addToCart = (product) => {
+    const cartItemsClone = [...cartItems];
+    var isProductExist = false;
+    cartItemsClone.forEach( p => {
+      if(p.id == product.id) {
+        p.qty++;
+        isProductExist= true;
+      }
+    })
+    if(!isProductExist) {
+      cartItemsClone.push({...product, qty: 1})
+    }
+    setcartItems(cartItemsClone);
   }
+  useEffect(() => {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems))
+  }, [cartItems])
+
+  const removeFromCart = (product) => {
+    const cartItemsClone = [...cartItems];
+    setcartItems(cartItemsClone.filter(p => p.id !== product.id))
+  }
+
 
 
   return (
@@ -60,7 +77,9 @@ function App() {
         <Header />
         <main>
           <div className="wrapper">
-            <Products products={products} />
+            <Products products={products}
+            addToCart={addToCart}
+            />
             <Filter
               size={size}
               sort={sort}
@@ -69,7 +88,7 @@ function App() {
               handelFilterBySort={handelFilterBySort}
             />
           </div>
-         <Cart cartItems={cartItems}/>
+         <Cart cartItems={cartItems} removeFromCart={removeFromCart}/>
         </main>
         <Footer />
       </div>

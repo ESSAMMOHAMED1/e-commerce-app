@@ -23,7 +23,7 @@ const Products = (props) => {
               <p> {product.title}</p>
               <span>${product.price}</span>
             </div>
-            <button> Add to cart </button>
+            <button onClick={() => props.addToCart(product)}> Add to cart </button>
           </div>
         ))}
       </div>
