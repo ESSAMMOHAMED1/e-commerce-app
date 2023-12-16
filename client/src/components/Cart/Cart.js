@@ -22,7 +22,23 @@ function Cart(props) {
                         </div>
                     </div>
                 ))}
+
             </div>
+         {
+          props.cartItems.length !== 0 &&
+          <div className='cart-footer'>
+          <div className='total-price'>
+          total price : ${
+            props.cartItems.reduce((acc,p)=>{
+               return acc + p.price;
+            },0)
+          }
+           </div>
+            <button>
+              select products
+            </button>
+          </div>
+         }   
         </div>
 
 
