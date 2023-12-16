@@ -24,15 +24,6 @@
   align-items: center;
   flex: 1;
 }
-.cart-wrapper .cart-item button {
-  display: block;
-  width: 15%;
-  border: 0;
-  background: #2a5ea5;
-  color: #fff;
-  padding: 7px;
-  border-radius: 3px;
-}
 .cart-wrapper .cart-footer {
   display: felx;
   justify-content: space-between;
@@ -40,5 +31,15 @@
   padding: 30px 0;
 }
 .cart-wrapper .cart-footer .total-price {
-  font-size: 20px;
+  font-size: 25px;
+}
+.cart-wrapper button {
+  display: inline-block;
+  width: 15%;
+  border: 0;
+  background: #2a5ea5;
+  color: #fff;
+  padding: 7px;
+  border-radius: 3px;
+  cursor: pointer;
 }

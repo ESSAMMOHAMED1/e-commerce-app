@@ -3,7 +3,6 @@ import "../../css/CheckOut/CheckOut.css"
 const CheckOut = () => {
   return (
     <div>
-        
     </div>
   )
 }
