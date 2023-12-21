@@ -52,7 +52,7 @@ function App() {
     const cartItemsClone = [...cartItems];
     var isProductExist = false;
     cartItemsClone.forEach( p => {
-      if(p.id == product.id) {
+      if(p.id === product.id) {
         p.qty++;
         isProductExist= true;
       }
@@ -60,7 +60,7 @@ function App() {
     if(!isProductExist) {
       cartItemsClone.push({...product, qty: 1})
     }
-    setcartItems(cartItemsClone);
+    setcartItems(cartItemsClone); 
   }
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems))
