@@ -36,14 +36,7 @@ function Cart(props) {
           </div>
           <button>select products</button>
         </div>
-      )}
-
-
-
-
-
-
-      
+      )}     
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.checkoute-form{
+    position: fixed;
+    bottom: 0;
+    left: 0;     
+    width: 100%;
+    padding: 30px;
+    background-color: #ddd;
+
+form{
+width: 60%;
+margin: auto;
+ > div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+input{
+    height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+}
+button{
+    display: inline-block;
+    width: 100%;
+    border: 0;
+    background: #2a5ea5;
+    color: #fff;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    height:40px;
+}
+}
+
+.form-close-icon{
+    position:absolute;
+    font-size:30px;
+    right: 30px;
+    top: 10px;
+    cursor:pointer; 
+}
+}
