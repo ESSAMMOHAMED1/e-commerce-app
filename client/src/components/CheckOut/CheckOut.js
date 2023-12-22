@@ -1,29 +1,26 @@
 import React from "react";
 import "../../css/CheckOut/CheckOut.css";
+import Input from "../Input/Input";
 const CheckOut = (props) => {
   return (
-<>
-   {props.showForme &&
-    <div className="checkoute-form">
-      <span className="form-close-icon" onClick={ ()=> props.setshowForme(false)}>&times;</span>
-      <form onSubmit={props.submitOrder}>
-        <div>
-          <label>Name</label>
-          <input type="text" required name="name" onChange={props.handleChange} value={props.value.name}></input>
+    <>
+      {props.showForme && (
+        <div className="checkoute-form">
+          <span
+            className="form-close-icon"
+            onClick={() => props.setshowForme(false)}
+          >
+            &times;
+          </span>
+          <form onSubmit={props.submitOrder}>
+            <Input handleChange={props.handleChange} value={props.value} />
+            <div>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
         </div>
-
-        <div>
-          <label>Email</label>
-          <input type="email" required name="email" onChange={props.handleChange} value={props.value.email}></input>
-        </div>
-
-        <div>
-          <button type="submit">Submit</button>
-        </div>
-      </form>
-    </div>
-  }
-  </>
+      )}
+    </>
   );
 };
 
