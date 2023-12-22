@@ -7,7 +7,6 @@ import data from "./data.json";
 import Products from "./components/Products/Products";
 import Filter from "./components/Filter/Filter";
 import Cart from "./components/Cart/Cart";
-import CheckOut from "./components/CheckOut/CheckOut";
 function App() {
   const [products, setproducts] = useState(data);
   const [cartItems, setcartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
@@ -90,7 +89,6 @@ function App() {
             />
           </div>
          <Cart cartItems={cartItems} removeFromCart={removeFromCart}/>
-         <CheckOut />
         </main>
         <Footer />
       </div>
