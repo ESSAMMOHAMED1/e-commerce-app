@@ -1,4 +1,5 @@
 import React from "react";
+import Bounce from "react-reveal/Bounce";
 import "../../css/Cart/Cart.css";
 import { useState } from "react";
 import CheckOut from "../CheckOut/CheckOut";
@@ -26,7 +27,8 @@ function Cart(props) {
   };
 
   return (
-    <div className="cart-wrapper">
+     <>
+     <div className="cart-wrapper">
       <div className="cart-title">
         {" "}
         {props.cartItems.length === 0 ? (
@@ -35,21 +37,24 @@ function Cart(props) {
           <p>There is {props.cartItems.length} products in cart</p>
         )}{" "}
       </div>
-      <div className="cart-items">
-        {props.cartItems.map((item) => (
-          <div className="cart-item" key={item.id}>
-            <img src={item.imgeUrl} alt="" />
-            <div className="cart-info">
-              <div>
-                <p> title {item.title} </p>
-                <p> qty: {item.qty} </p>
-                <p> price: ${item.price} </p>
+        <div className="cart-items">
+          {props.cartItems.map((item) => (
+            <div className="cart-item" key={item.id}>
+              <img src={item.imgeUrl} alt="" />
+              <div className="cart-info">
+                <div>
+                  <p> title {item.title} </p>
+                  <p> qty: {item.qty} </p>
+                  <p> price: ${item.price} </p>
+                </div>
+                <button onClick={() => props.removeFromCart(item)}>
+                  Remove
+                </button>
               </div>
-              <button onClick={() => props.removeFromCart(item)}>Remove</button>
             </div>
-          </div>
-        ))}
-      </div>
+            
+          ))}
+        </div>
       {props.cartItems.length !== 0 && (
         <div className="cart-footer">
           <div className="total-price">
@@ -62,13 +67,14 @@ function Cart(props) {
         </div>
       )}
       <CheckOut
-        value= {value}
+        value={value}
         showForme={showForme}
         setshowForme={setshowForme}
         handleChange={handleChange}
         submitOrder={submitOrder}
       />
     </div>
+    </>
   );
 }
 
