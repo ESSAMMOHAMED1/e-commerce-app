@@ -4,10 +4,11 @@ import { useState } from "react";
 import CheckOut from "../CheckOut/CheckOut";
 function Cart(props) {
   const [showForme, setshowForme] = useState(false);
-  const [value, setvalue] = useState("");
-  
-  
-    
+  const [value, setvalue] = useState({
+    name: "",
+    email: "",
+  });
+
   const submitOrder = (e) => {
     e.preventDefault();
     const order = {
@@ -17,16 +18,12 @@ function Cart(props) {
     console.log(order);
   };
 
-
-  const handelChange = (e) => {
-   setvalue((prevState) => ({
+  const handleChange = (e) => {
+    setvalue((prevState) => ({
       ...prevState,
-      [e.target.value]: e.target.value,
+      [e.target.name]: e.target.value,
     }));
-
   };
-
-
 
   return (
     <div className="cart-wrapper">
@@ -65,9 +62,10 @@ function Cart(props) {
         </div>
       )}
       <CheckOut
+        value= {value}
         showForme={showForme}
         setshowForme={setshowForme}
-        handelChange={handelChange}
+        handleChange={handleChange}
         submitOrder={submitOrder}
       />
     </div>

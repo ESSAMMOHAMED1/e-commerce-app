@@ -9,12 +9,12 @@ const CheckOut = (props) => {
       <form onSubmit={props.submitOrder}>
         <div>
           <label>Name</label>
-          <input type="text" required name="name" onChange={props.handelChange}></input>
+          <input type="text" required name="name" onChange={props.handleChange} value={props.value.name}></input>
         </div>
 
         <div>
           <label>Email</label>
-          <input type="email" required name="email" onChange={props.handelChange}></input>
+          <input type="email" required name="email" onChange={props.handleChange} value={props.value.email}></input>
         </div>
 
         <div>
